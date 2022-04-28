@@ -11,6 +11,8 @@ import javax.validation.constraints.NotNull
 @Entity
 class Collaborate(
 
+    title: String,
+
     content: String,
 
     progress: Progress,
@@ -28,6 +30,11 @@ class Collaborate(
     var receivedUser: User
 
 ): BaseTimeIdEntity() {
+
+    @NotNull
+    @Length(max = 20)
+    var title = title
+        protected set
 
     @Column(columnDefinition = "TEXT", nullable = false)
     var content = content
