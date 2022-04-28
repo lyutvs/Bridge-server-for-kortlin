@@ -37,7 +37,7 @@ class Schedule (
         protected set
 
     @NotNull
-    var scheduleStarAt  = scheduleStartAt
+    var scheduleStartAt  = scheduleStartAt
         protected set
 
     @NotNull
