@@ -19,7 +19,7 @@ class Collaborate(
 
     managerName: String,
 
-    companyPhoneNumber: String,
+    managerPhoneNumber: String,
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "send_user_id")
@@ -52,7 +52,7 @@ class Collaborate(
 
     @NotNull
     @Length(max = 11)
-    var companyPhoneNumber = companyPhoneNumber
+    var companyPhoneNumber = managerPhoneNumber
         protected set
 
 }
