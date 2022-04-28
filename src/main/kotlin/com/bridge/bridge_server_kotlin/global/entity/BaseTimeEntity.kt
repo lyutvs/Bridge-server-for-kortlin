@@ -9,7 +9,7 @@ import javax.validation.constraints.NotNull
 
 @EntityListeners(value = [AuditingEntityListener::class])
 @MappedSuperclass
-class BaseTimeEntity {
+abstract class BaseTimeEntity {
 
     @NotNull
     @CreatedDate
