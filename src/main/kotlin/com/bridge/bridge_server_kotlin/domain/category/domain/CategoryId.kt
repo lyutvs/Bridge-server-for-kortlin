@@ -1,5 +1,6 @@
 package com.bridge.bridge_server_kotlin.domain.category.domain
 
+import com.bridge.bridge_server_kotlin.domain.feed.domain.Feed
 import com.bridge.bridge_server_kotlin.domain.user.domain.User
 import java.io.Serializable
 import javax.persistence.Embeddable
@@ -17,5 +18,9 @@ class CategoryId(
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
     var user: User,
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "feed_id", nullable = false)
+    var feed: Feed
 
 ): Serializable

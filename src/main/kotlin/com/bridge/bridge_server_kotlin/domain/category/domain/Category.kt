@@ -12,10 +12,6 @@ class Category(
 
     title: String,
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", nullable = false)
-    var user: User
-
 ): BaseTimeIdEntity() {
 
     @NotNull
